@@ -1,17 +1,14 @@
-import { useState } from "react"
-
+import Router from "./routers/route"
+import Framework from "./framework"
 
 function App() {
-  const [count, setCount] = useState(0)
-  let name: string
-  name = "Yother"
   return (
-    <div>
-      Hello,world
-      <div>{count}</div>
-      <button onClick={() => setCount(count + 1)} >Increment</button>
-      <div>My name is {name}</div>
-    </div>
+    <>
+      <div>路由最外层</div>
+      <Framework>
+        <Router />
+      </Framework>
+    </>
   )
 }
 
